@@ -25,7 +25,7 @@ export async function  deleteActivity(token,id){
       }
     });
     if(!res.ok){
-      const result = res.json();
+      const result = await res.json();
       throw Error(result.message)
     }
     
